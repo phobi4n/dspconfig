@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>content/q</file>
+        <file>content/dspconfig.png</file>
+        <file>content/abc.png</file>
+        <file>content/qml3</file>
+        <file>content/despy2.png</file>
+    </qresource>
+</RCC>

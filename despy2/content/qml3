@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- tutorial.qdoc -->
+  <title>QML Tutorial 1 - Basic Types | Qt Quick 5.6</title>
+</head>
+<body>
+<h1 class="title">QML Tutorial 1 - Basic Types</h1>
+<span class="subtitle"></span>
+<!-- $$$qml-tutorial1.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>This first program is a very simple &quot;Hello world&quot; example that introduces some basic QML concepts. The picture below is a screenshot of this program.</p>
+<p>Here is the QML code for the application:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">page</span>
+    <span class="name">width</span>: <span class="number">320</span>; <span class="name">height</span>: <span class="number">480</span>
+    <span class="name">color</span>: <span class="string">&quot;lightgray&quot;</span>
+
+    <span class="type"><a href="qml-qtquick-text.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">helloText</span>
+        <span class="name">text</span>: <span class="string">&quot;Hello world!&quot;</span>
+        <span class="name">y</span>: <span class="number">30</span>
+        <span class="name">anchors</span>.horizontalCenter: <span class="name">page</span>.<span class="name">horizontalCenter</span>
+        <span class="name">font</span>.pointSize: <span class="number">24</span>; <span class="name">font</span>.bold: <span class="number">true</span>
+    }
+}</pre>
+<a name="walkthrough"></a>
+<h2 id="walkthrough">Walkthrough</h2>
+<a name="import"></a>
+<h3 >Import</h3>
+<p>First, we need to import the types that we need for this example. Most QML files will import the built-in QML types (like <a href="qml-qtquick-rectangle.html">Rectangle</a>, <a href="qtquick-imageelements-example.html#image">Image</a>, ..&#x2e;) that come with Qt, using:</p>
+<pre class="qml">import QtQuick 2.0</pre>
+<a name="rectangle-type"></a>
+<h3 >Rectangle Type</h3>
+<pre class="qml"><span class="type"><a href="qml-qtquick-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">page</span>
+    <span class="name">width</span>: <span class="number">320</span>; <span class="name">height</span>: <span class="number">480</span>
+    <span class="name">color</span>: <span class="string">&quot;lightgray&quot;</span></pre>
+<p>We declare a root object of type <a href="qml-qtquick-rectangle.html">Rectangle</a>. It is one of the basic building blocks you can use to create an application in QML. We give it an <code>id</code> to be able to refer to it later. In this case, we call it &quot;page&quot;. We also set the <code>width</code>, <code>height</code> and <code>color</code> properties. The <a href="qml-qtquick-rectangle.html">Rectangle</a> type contains many other properties (such as <code>x</code> and <code>y</code>), but these are left at their default values.</p>
+<a name="text-type"></a>
+<h3 >Text Type</h3>
+<pre class="qml">    <span class="type"><a href="qml-qtquick-text.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">helloText</span>
+        <span class="name">text</span>: <span class="string">&quot;Hello world!&quot;</span>
+        <span class="name">y</span>: <span class="number">30</span>
+        <span class="name">anchors</span>.horizontalCenter: <span class="name">page</span>.<span class="name">horizontalCenter</span>
+        <span class="name">font</span>.pointSize: <span class="number">24</span>; <span class="name">font</span>.bold: <span class="number">true</span>
+    }</pre>
+<p>We add a <a href="qml-qtquick-text.html">Text</a> type as a child of the root Rectangle type that displays the text 'Hello world!'.</p>
+<p>The <code>y</code> property is used to position the text vertically at 30 pixels from the top of its parent.</p>
+<p>The <code>anchors.horizontalCenter</code> property refers to the horizontal center of an type. In this case, we specify that our text type should be horizontally centered in the <i>page</i> element (see <a href="qtquick-positioning-anchors.html">Anchor-Based Layout</a>).</p>
+<p>The <code>font.pointSize</code> and <code>font.bold</code> properties are related to fonts and use the dot notation.</p>
+<a name="viewing-the-example"></a>
+<h3 >Viewing the example</h3>
+<p>To view what you have created, run the <a href="qtquick-qmlscene.html">qmlscene</a> tool (located in the <code>bin</code> directory) with your filename as the first argument. For example, to run the provided completed Tutorial 1 example from the install location, you would type:</p>
+<pre class="cpp">qmlscene tutorials<span class="operator">/</span>helloworld<span class="operator">/</span>tutorial1<span class="operator">.</span>qml</pre>
+</div>
+<!-- @@@qml-tutorial1.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="qml-tutorial.html">QML Tutorial</a>
+<a class="nextPage" href="qml-tutorial2.html">QML Tutorial 2 - QML Components</a>
+</p>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">&copy;</acronym> 2016 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a> as published by the Free Software Foundation.     Qt and respective logos are trademarks of The Qt Company Ltd.     in Finland and/or other countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<footer id="footerbar">
+    <div class="footer-main">
+            <div class="container clearfix">
+                <nav class="footer-nav clearfix">
+                    <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-1403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1403"><a href="http://qt.io/download/">Download</a>
+<ul class="sub-menu">
+    <li id="menu-item-11677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11677"><a href="http://qt.io/download/">Start for Free</a></li>
+    <li id="menu-item-15840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15840"><a href="http://qt.io/download-eval-for-applications-step-2/">Qt for Application Development</a></li>
+    <li id="menu-item-15841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15841"><a href="http://qt.io/request-eval-for-devices-step-2/">Qt for Device Creation</a></li>
+    <li id="menu-item-15838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15838"><a href="http://qt.io/download-open-source/">Qt Open Source</a></li>
+    <li id="menu-item-1415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1415"><a href="http://qt.io/terms-conditions/">Terms &amp; Conditions</a></li>
+    <li id="menu-item-14184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14184"><a href="http://qt.io/FAQ/">Licensing FAQ</a></li>
+</ul>
+</li>
+<li id="menu-item-1355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1355"><a href="http://qt.io/product/">Product</a>
+<ul class="sub-menu">
+    <li id="menu-item-12576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12576"><a href="http://qt.io/product/">Qt in Use</a></li>
+    <li id="menu-item-15848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15848"><a href="http://qt.io/application-development/">Qt for Application Development</a></li>
+    <li id="menu-item-1357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1357"><a href="http://qt.io/qt-for-device-creation/">Qt for Device Creation</a></li>
+    <li id="menu-item-1356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1356"><a href="http://qt.io/qt-features/">Commercial Features</a></li>
+    <li id="menu-item-15850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15850"><a href="http://qt.io/ide/">Qt Creator IDE</a></li>
+    <li id="menu-item-1359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="http://qt.io/qt-quick/">Qt Quick</a></li>
+</ul>
+</li>
+<li id="menu-item-1347" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1347"><a href="http://qt.io/services/">Services</a>
+<ul class="sub-menu">
+    <li id="menu-item-4028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4028"><a href="http://qt.io/services-technology-evaluation/">Technology Evaluation</a></li>
+    <li id="menu-item-4027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4027"><a href="http://qt.io/services-proof-of-concept/">Proof of Concept</a></li>
+    <li id="menu-item-4026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4026"><a href="http://qt.io/services-design-implementation/">Design &amp; Implementation</a></li>
+    <li id="menu-item-4025" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4025"><a href="http://qt.io/services-productization/">Productization</a></li>
+    <li id="menu-item-15863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15863"><a href="http://qt.io/qt-training/">Qt Training</a></li>
+    <li id="menu-item-4779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4779"><a href="https://qt.io/partners/">Partner Network</a></li>
+</ul>
+</li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33"><a href="http://qt.io/developers/">Developers</a>
+<ul class="sub-menu">
+    <li id="menu-item-1365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1365"><a href="http://doc.qt.io/">Documentation</a></li>
+    <li id="menu-item-1364" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1364"><a href="http://doc.qt.io/qt-5/qtexamplesandtutorials.html">Examples &amp; Tutorials</a></li>
+    <li id="menu-item-1363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1363"><a href="http://doc.qt.io/qt-5/topics-app-development.html">Development Tools</a></li>
+    <li id="menu-item-1361" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1361"><a href="http://wiki.qt.io/">Wiki</a></li>
+    <li id="menu-item-1360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1360"><a href="http://forum.qt.io/">Forums</a></li>
+    <li id="menu-item-15922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15922"><a href="http://wiki.qt.io/contribute">Contribute to Qt</a></li>
+</ul>
+</li>
+<li id="menu-item-1350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1350"><a href="http://qt.io/about-us/">About us</a>
+<ul class="sub-menu">
+    <li id="menu-item-1353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1353"><a href="http://qt.io/events/">Training &amp; Events</a></li>
+    <li id="menu-item-1354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1354"><a href="http://qt.io/resource-center/">Resource Center</a></li>
+    <li id="menu-item-12285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12285"><a href="http://qt.io/news/">News</a></li>
+    <li id="menu-item-1349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1349"><a href="http://qt.io/careers/">Careers</a></li>
+    <li id="menu-item-11676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11676"><a href="http://qt.io/locations/">Locations</a></li>
+    <li id="menu-item-15911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15911"><a href="http://qt.io/contact-us">Contact Us</a></li>
+</ul>
+</li>
+</ul></div></nav>
+<a href="http://qt.io/about-us/" target="_blank" class="theqtcompany"></a>
+    <div class="footer-social clearfix">
+        <div class="facebook">
+            <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fqt&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" style="border:none;overflow:hidden;height:21px;"></iframe>
+        </div>
+        <div class="twitter">
+            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.33b190ea0cba008796487b65df7f6d8e.en.html#_=1414403615717&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=qtproject&amp;show_count=true&amp;show_screen_name=false&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 160px; height: 20px;"></iframe>
+        </div>
+    </div>
+</div>
+</div>
+<div class="disclaimer">
+<div class="container clearfix no_discs">
+    <ul id="menu-footer-submenu" class="right clearfix"><li id="menu-item-1795" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1795"><a title="Sign into your account." href="https://account.qt.io/login">Sign In</a></li>
+      <li id="menu-item-10375" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10375"><a href="mailto:feedback@theqtcompany.com?Subject=Feedback%20about%20doc.qt.io%20site">Feedback</a></li>
+      <li id="menu-item-1494" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1494"><a href="http://qt.io/contact-us/">Contact us</a></li>
+      <li id="menu-item-4472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4472"><a href="http://qt.io/about-us/">© 2016 The Qt Company</a></li>
+    </ul>
+</div>
+</div>
+</footer>
+</div>
+</body>
+</html>

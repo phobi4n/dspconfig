@@ -1,0 +1,10 @@
+[Desktop Entry]
+Exec=dspconfig
+Icon=dspconfig
+Type=Application
+X-DocPath=
+X-KDE-StartupNotify=true
+OnlyShowIn=KDE;
+GenericName=DSP Manager
+Name=DSP Manager
+Categories=Qt;KDE;Settings;
